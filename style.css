@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  background-color: #000000;
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
+}
+
+/* Discreet, elegant scrollbar matching dark theme */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Fullscreen fixed canvas */
+#animation-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  z-index: 1;
+  pointer-events: none;
+  background-color: #000000;
+}
+
+/* Scroll track determining the scrub depth */
+#scroll-track {
+  width: 100%;
+  height: 600vh;
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+/* Ultra-minimal hairline progress bar at very top */
+#loader-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, #10b981, #06b6d4, #3b82f6);
+  z-index: 99;
+  pointer-events: none;
+  transition: width 0.08s ease-out, opacity 0.6s ease;
+}
+
+#loader-bar.hidden {
+  opacity: 0;
+  pointer-events: none;
+}

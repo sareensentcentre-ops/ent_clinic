@@ -1,0 +1,394 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" width="1600" height="1100">
+  <defs>
+    <!-- Background and Wall Gradients -->
+    <linearGradient id="wallGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fdfbf7"/>
+      <stop offset="60%" stop-color="#f4eee1"/>
+      <stop offset="100%" stop-color="#ebdcc7"/>
+    </linearGradient>
+    <linearGradient id="marbleWall" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fffdfa"/>
+      <stop offset="30%" stop-color="#f7f2e8"/>
+      <stop offset="70%" stop-color="#fbf7ef"/>
+      <stop offset="100%" stop-color="#efe7d8"/>
+    </linearGradient>
+    <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#eedfc8"/>
+      <stop offset="40%" stop-color="#f6edde"/>
+      <stop offset="70%" stop-color="#fffbf3"/>
+      <stop offset="100%" stop-color="#f1e6d4"/>
+    </linearGradient>
+    <linearGradient id="slatWood" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a2e1b"/>
+      <stop offset="50%" stop-color="#7a4e2d"/>
+      <stop offset="100%" stop-color="#3c2415"/>
+    </linearGradient>
+    <linearGradient id="warmLightGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffb74d" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#ffe082" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ffb74d" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="warmLightGlowR" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#ffb74d" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#ffe082" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ffb74d" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Desk Gradients -->
+    <linearGradient id="tealPanel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a7a72"/>
+      <stop offset="60%" stop-color="#1f605a"/>
+      <stop offset="100%" stop-color="#144440"/>
+    </linearGradient>
+    <linearGradient id="whiteDesk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="goldLettering" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffe599"/>
+      <stop offset="40%" stop-color="#ffd15c"/>
+      <stop offset="70%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#997a15"/>
+    </linearGradient>
+    <linearGradient id="goldMolding" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d4af37"/>
+      <stop offset="50%" stop-color="#f6d365"/>
+      <stop offset="100%" stop-color="#b8860b"/>
+    </linearGradient>
+    <linearGradient id="chromeGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#d1d5db"/>
+      <stop offset="70%" stop-color="#9ca3af"/>
+      <stop offset="100%" stop-color="#6b7280"/>
+    </linearGradient>
+    <linearGradient id="brownSofa" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5c4436"/>
+      <stop offset="50%" stop-color="#4a372c"/>
+      <stop offset="100%" stop-color="#38281f"/>
+    </linearGradient>
+    <!-- Spotlight filters -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="heavyGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="35" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <radialGradient id="ceilingLight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="25%" stop-color="#fff9e6"/>
+      <stop offset="60%" stop-color="#ffecb3" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ffca28" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="floorSpotlight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8"/>
+      <stop offset="40%" stop-color="#fff8e1" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ffe082" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Base Back Wall -->
+  <rect x="0" y="0" width="1600" height="750" fill="url(#wallGrad)"/>
+
+  <!-- Left Wall in Perspective -->
+  <polygon points="0,0 260,140 260,760 0,820" fill="#f8f4ec"/>
+  <line x1="260" y1="140" x2="260" y2="760" stroke="#dfd5c4" stroke-width="2"/>
+
+  <!-- Right Wall in Perspective -->
+  <polygon points="1600,0 1340,140 1340,760 1600,820" fill="#f5ede2"/>
+  <line x1="1340" y1="140" x2="1340" y2="760" stroke="#dfd5c4" stroke-width="2"/>
+
+  <!-- Center Feature Wall with Marble Texture -->
+  <rect x="480" y="140" width="640" height="460" fill="url(#marbleWall)"/>
+  <!-- Marble Veins -->
+  <path d="M 520,180 Q 600,260 700,220 T 900,320 T 1080,280" fill="none" stroke="#e8ded0" stroke-width="2" opacity="0.6"/>
+  <path d="M 500,380 Q 640,420 800,390 T 1060,460" fill="none" stroke="#e8ded0" stroke-width="2" opacity="0.5"/>
+
+  <!-- Left Wood Slats (Fluted Panel) with Warm LED Backlight -->
+  <rect x="290" y="240" width="190" height="360" fill="#2d1c12"/>
+  <rect x="280" y="235" width="25" height="370" fill="url(#warmLightGlow)" filter="url(#softGlow)"/>
+  <!-- Repeat Slats Left -->
+  <g fill="url(#slatWood)">
+    <rect x="300" y="240" width="12" height="360" rx="3"/>
+    <rect x="318" y="240" width="12" height="360" rx="3"/>
+    <rect x="336" y="240" width="12" height="360" rx="3"/>
+    <rect x="354" y="240" width="12" height="360" rx="3"/>
+    <rect x="372" y="240" width="12" height="360" rx="3"/>
+    <rect x="390" y="240" width="12" height="360" rx="3"/>
+    <rect x="408" y="240" width="12" height="360" rx="3"/>
+    <rect x="426" y="240" width="12" height="360" rx="3"/>
+    <rect x="444" y="240" width="12" height="360" rx="3"/>
+    <rect x="462" y="240" width="12" height="360" rx="3"/>
+  </g>
+  <!-- Vertical LED strip warm glow right of left slats -->
+  <rect x="475" y="235" width="15" height="370" fill="url(#warmLightGlowR)" filter="url(#softGlow)"/>
+
+  <!-- Right Wood Slats (Fluted Panel) with Warm LED Backlight -->
+  <rect x="1120" y="240" width="190" height="360" fill="#2d1c12"/>
+  <rect x="1110" y="235" width="20" height="370" fill="url(#warmLightGlow)" filter="url(#softGlow)"/>
+  <!-- Repeat Slats Right -->
+  <g fill="url(#slatWood)">
+    <rect x="1125" y="240" width="12" height="360" rx="3"/>
+    <rect x="1143" y="240" width="12" height="360" rx="3"/>
+    <rect x="1161" y="240" width="12" height="360" rx="3"/>
+    <rect x="1179" y="240" width="12" height="360" rx="3"/>
+    <rect x="1197" y="240" width="12" height="360" rx="3"/>
+    <rect x="1215" y="240" width="12" height="360" rx="3"/>
+    <rect x="1233" y="240" width="12" height="360" rx="3"/>
+    <rect x="1251" y="240" width="12" height="360" rx="3"/>
+    <rect x="1269" y="240" width="12" height="360" rx="3"/>
+    <rect x="1287" y="240" width="12" height="360" rx="3"/>
+  </g>
+  <rect x="1305" y="235" width="25" height="370" fill="url(#warmLightGlowR)" filter="url(#softGlow)"/>
+
+  <!-- Left Medical Glass Cabinet -->
+  <rect x="195" y="160" width="105" height="260" rx="6" fill="#718096" stroke="#4a5568" stroke-width="2"/>
+  <rect x="202" y="168" width="42" height="244" fill="#a0aec0" opacity="0.6"/>
+  <rect x="250" y="168" width="42" height="244" fill="#a0aec0" opacity="0.6"/>
+  <line x1="202" y1="230" x2="292" y2="230" stroke="#cbd5e0" stroke-width="2"/>
+  <line x1="202" y1="295" x2="292" y2="295" stroke="#cbd5e0" stroke-width="2"/>
+  <line x1="202" y1="360" x2="292" y2="360" stroke="#cbd5e0" stroke-width="2"/>
+
+  <!-- Left Wall AC Unit -->
+  <rect x="0" y="15" width="160" height="210" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="10" y="180" width="140" height="25" fill="#e2e8f0"/>
+  <text x="80" y="140" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="bold" fill="#64748b" text-anchor="middle">Haier</text>
+
+  <!-- Left Wall Notice Boards -->
+  <rect x="110" y="160" width="60" height="150" fill="#ffffff" stroke="#d4af37" stroke-width="3" rx="4"/>
+  <rect x="175" y="160" width="40" height="150" fill="#ffffff" stroke="#d4af37" stroke-width="3" rx="4"/>
+
+  <!-- Right Wall Built-in Niches with Warm Light -->
+  <rect x="1350" y="230" width="80" height="120" rx="6" fill="#fff9e6" stroke="#e2d4be" stroke-width="2"/>
+  <!-- Mini potted plant in niche -->
+  <ellipse cx="1390" cy="335" rx="18" ry="6" fill="#94a3b8"/>
+  <rect x="1380" y="315" width="20" height="20" rx="3" fill="#ffffff"/>
+  <path d="M 1380,315 Q 1370,285 1385,280 Q 1400,285 1390,315" fill="#15803d"/>
+  <path d="M 1388,315 Q 1410,290 1398,280 Q 1385,295 1388,315" fill="#16a34a"/>
+
+  <rect x="1350" y="370" width="80" height="180" rx="6" fill="#fff9e6" stroke="#e2d4be" stroke-width="2"/>
+  <rect x="1360" y="490" width="55" height="40" fill="#e2e8f0" rx="3"/>
+
+  <!-- Right Wall Oscillating Fan -->
+  <circle cx="1245" cy="245" r="45" fill="none" stroke="#ffffff" stroke-width="5"/>
+  <circle cx="1245" cy="245" r="43" fill="#ffffff" opacity="0.3"/>
+  <circle cx="1245" cy="245" r="8" fill="#e2e8f0"/>
+  <line x1="1245" y1="245" x2="1225" y2="225" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+  <line x1="1245" y1="245" x2="1270" y2="235" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+  <line x1="1245" y1="245" x2="1245" y2="275" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+  <line x1="1245" y1="290" x2="1265" y2="310" stroke="#cbd5e1" stroke-width="8"/>
+
+  <!-- Right Wall Posters -->
+  <rect x="1275" y="240" width="45" height="160" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" rx="3"/>
+
+  <!-- Far Right Doorway -->
+  <rect x="1490" y="160" width="110" height="600" fill="#2d2218" stroke="#1f160e" stroke-width="3"/>
+  <rect x="1485" y="150" width="115" height="610" fill="none" stroke="#ffffff" stroke-width="8"/>
+  <line x1="1500" y1="480" x2="1500" y2="520" stroke="#d1d5db" stroke-width="4"/>
+
+  <!-- CEILING ARCHITECTURE -->
+  <path d="M 0,0 L 1600,0 L 1600,140 Q 1100,170 800,100 T 260,140 L 0,0 Z" fill="#ffffff"/>
+  <!-- Curved Wood Trim Cove Lighting -->
+  <path d="M 120,0 Q 400,160 840,160 Q 1150,160 1600,60" fill="none" stroke="url(#goldMolding)" stroke-width="22"/>
+  <path d="M 120,0 Q 400,160 840,160 Q 1150,160 1600,60" fill="none" stroke="#fff9e6" stroke-width="10" filter="url(#softGlow)"/>
+
+  <!-- Ceiling Spotlights -->
+  <g>
+    <!-- Spot 1 -->
+    <ellipse cx="230" cy="50" rx="35" ry="18" fill="url(#ceilingLight)" filter="url(#softGlow)"/>
+    <ellipse cx="230" cy="50" rx="18" ry="8" fill="#ffffff"/>
+    <!-- Spot 2 -->
+    <ellipse cx="380" cy="110" rx="35" ry="18" fill="url(#ceilingLight)" filter="url(#softGlow)"/>
+    <ellipse cx="380" cy="110" rx="18" ry="8" fill="#ffffff"/>
+    <!-- Spot 3 -->
+    <ellipse cx="650" cy="145" rx="35" ry="18" fill="url(#ceilingLight)" filter="url(#softGlow)"/>
+    <ellipse cx="650" cy="145" rx="18" ry="8" fill="#ffffff"/>
+    <!-- Spot 4 -->
+    <ellipse cx="780" cy="145" rx="35" ry="18" fill="url(#ceilingLight)" filter="url(#softGlow)"/>
+    <ellipse cx="780" cy="145" rx="18" ry="8" fill="#ffffff"/>
+    <!-- Spot 5 -->
+    <ellipse cx="940" cy="145" rx="35" ry="18" fill="url(#ceilingLight)" filter="url(#softGlow)"/>
+    <ellipse cx="940" cy="145" rx="18" ry="8" fill="#ffffff"/>
+    <!-- Spot 6 -->
+    <ellipse cx="1220" cy="50" rx="40" ry="20" fill="url(#ceilingLight)" filter="url(#softGlow)"/>
+    <ellipse cx="1220" cy="50" rx="20" ry="9" fill="#ffffff"/>
+  </g>
+
+  <!-- Track Lights Over Reception -->
+  <line x1="700" y1="215" x2="920" y2="215" stroke="#1e293b" stroke-width="4"/>
+  <ellipse cx="725" cy="230" rx="7" ry="12" fill="#1e293b" transform="rotate(-15 725 230)"/>
+  <ellipse cx="810" cy="235" rx="7" ry="12" fill="#1e293b"/>
+  <ellipse cx="895" cy="230" rx="7" ry="12" fill="#1e293b" transform="rotate(15 895 230)"/>
+
+  <!-- SAREEN'S LOGO ON MARBLE WALL (ILLUMINATED) -->
+  <g transform="translate(800, 310)">
+    <!-- Soft Backlight Halo -->
+    <circle cx="0" cy="-20" r="60" fill="#38bdf8" opacity="0.35" filter="url(#heavyGlow)"/>
+    <circle cx="0" cy="-20" r="40" fill="#fbbf24" opacity="0.25" filter="url(#softGlow)"/>
+
+    <!-- Head Profile Logo Icon -->
+    <path d="M -28,-48 C -10,-60 20,-55 30,-30 C 35,-15 32,5 25,12 C 18,20 12,28 10,38 L -15,38 C -15,28 -18,15 -25,5 C -35,-8 -35,-35 -28,-48 Z" fill="#1e3a8a"/>
+    <!-- Golden Ear & Inner Light -->
+    <circle cx="2" cy="-14" r="14" fill="#fbbf24"/>
+    <circle cx="2" cy="-14" r="9" fill="#ffffff"/>
+    <path d="M 6,-18 Q 18,-8 10,6" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Text: SAREEN'S -->
+    <text x="0" y="65" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="34" font-weight="900" fill="#0f2b5c" text-anchor="middle" letter-spacing="4">SAREEN&apos;S</text>
+    <!-- Text: ENT & HEAD NECK CLINIC -->
+    <text x="0" y="88" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="3.5">ENT &amp; HEAD NECK CLINIC</text>
+  </g>
+
+  <!-- RECEPTION DESK & COUNTER -->
+  <!-- Behind desk chair & monitor -->
+  <ellipse cx="760" cy="495" rx="35" ry="25" fill="#1e293b"/>
+  <rect x="760" y="450" width="80" height="55" rx="4" fill="#64748b" stroke="#334155" stroke-width="2"/>
+  <rect x="795" y="505" width="10" height="15" fill="#94a3b8"/>
+  <ellipse cx="800" cy="520" rx="16" ry="4" fill="#cbd5e1"/>
+
+  <!-- Main Reception Counter Body -->
+  <!-- Shadow under desk -->
+  <ellipse cx="770" cy="745" rx="360" ry="22" fill="#000000" opacity="0.3" filter="url(#softGlow)"/>
+
+  <!-- Emerald/Teal Front Panel with Depth -->
+  <path d="M 410,540 L 1055,540 L 1055,735 L 410,735 Z" fill="url(#tealPanel)"/>
+  <!-- Gold Toe Kick / Base Trim -->
+  <rect x="405" y="730" width="655" height="15" fill="url(#goldMolding)"/>
+
+  <!-- Modern White Wrap Frame (Curved Profile Matching Uploaded Image) -->
+  <path d="M 380,475 L 530,475 Q 560,550 630,550 L 930,550 Q 980,550 1000,475 L 1080,475 L 1080,550 L 1060,550 L 1060,730 L 400,730 L 400,550 L 380,550 Z" fill="url(#whiteDesk)" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <!-- Glass Screen Panel along Middle -->
+  <rect x="545" y="488" width="440" height="52" rx="4" fill="#e0f2fe" opacity="0.6" stroke="#bae6fd" stroke-width="2"/>
+  <line x1="545" y1="488" x2="985" y2="488" stroke="#ffffff" stroke-width="3"/>
+
+  <!-- Warm LED Under-Counter Strip Light -->
+  <rect x="410" y="536" width="645" height="6" fill="#ffe082" filter="url(#softGlow)"/>
+  <line x1="410" y1="538" x2="1055" y2="538" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- Desk Surface Planters -->
+  <ellipse cx="480" cy="475" rx="14" ry="5" fill="#64748b"/>
+  <rect x="470" y="455" width="20" height="20" rx="3" fill="#ffffff"/>
+  <circle cx="480" cy="445" r="14" fill="#16a34a"/>
+  <circle cx="474" cy="440" r="10" fill="#22c55e"/>
+
+  <ellipse cx="1020" cy="475" rx="14" ry="5" fill="#64748b"/>
+  <rect x="1010" y="455" width="20" height="20" rx="3" fill="#ffffff"/>
+  <circle cx="1020" cy="445" r="14" fill="#16a34a"/>
+  <circle cx="1026" cy="440" r="10" fill="#22c55e"/>
+
+  <!-- GOLD EMBOSSED "RECEPTION" LETTERING (Exact match to uploaded image) -->
+  <g transform="translate(735, 645)">
+    <!-- Embossed shadow -->
+    <text x="2" y="2" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="44" font-weight="900" fill="#0d2e2b" text-anchor="middle" letter-spacing="16">RECEPTION</text>
+    <!-- Gold 3D Text -->
+    <text x="0" y="0" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="44" font-weight="900" fill="url(#goldLettering)" text-anchor="middle" letter-spacing="16">RECEPTION</text>
+  </g>
+
+  <!-- Potted Plants Flanking Desk -->
+  <!-- Left Plant -->
+  <g transform="translate(360, 560)">
+    <ellipse cx="0" cy="180" rx="45" ry="15" fill="#000000" opacity="0.3"/>
+    <!-- White Planter Pot -->
+    <path d="M -35,90 L -30,175 L 30,175 L 35,90 Z" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+    <ellipse cx="0" cy="90" rx="35" ry="12" fill="#e2e8f0"/>
+    <ellipse cx="0" cy="90" rx="32" ry="10" fill="#475569"/>
+    <!-- Lush Tropical Green Leaves -->
+    <path d="M 0,90 Q -45,10 -55,-40 Q -30,-20 0,90" fill="#15803d"/>
+    <path d="M 0,90 Q -25,-10 -35,-80 Q -15,-40 0,90" fill="#16a34a"/>
+    <path d="M 0,90 Q 0,-20 -5,-110 Q 15,-40 0,90" fill="#22c55e"/>
+    <path d="M 0,90 Q 25,-10 35,-80 Q 15,-40 0,90" fill="#16a34a"/>
+    <path d="M 0,90 Q 45,10 55,-40 Q 30,-20 0,90" fill="#15803d"/>
+    <path d="M 0,90 Q -60,40 -85,15 Q -50,15 0,90" fill="#14532d"/>
+    <path d="M 0,90 Q 60,40 85,15 Q 50,15 0,90" fill="#14532d"/>
+  </g>
+
+  <!-- Right Plant -->
+  <g transform="translate(1120, 580)">
+    <ellipse cx="0" cy="170" rx="42" ry="14" fill="#000000" opacity="0.3"/>
+    <!-- Square White Pot -->
+    <rect x="-30" y="90" width="60" height="75" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+    <!-- Lush Leaves -->
+    <path d="M 0,90 Q -40,15 -50,-30 Q -25,-10 0,90" fill="#15803d"/>
+    <path d="M 0,90 Q -20,-10 -25,-70 Q -5,-30 0,90" fill="#16a34a"/>
+    <path d="M 0,90 Q 0,-20 0,-90 Q 15,-30 0,90" fill="#22c55e"/>
+    <path d="M 0,90 Q 20,-10 25,-70 Q 5,-30 0,90" fill="#16a34a"/>
+    <path d="M 0,90 Q 40,15 50,-30 Q 25,-10 0,90" fill="#15803d"/>
+  </g>
+
+  <!-- FLOORS WITH REFLECTIONS -->
+  <polygon points="0,750 1600,750 1600,1100 0,1100" fill="url(#floorGrad)"/>
+
+  <!-- Floor Grid Lines / Large Marble Tile Joints in Perspective -->
+  <line x1="0" y1="810" x2="1600" y2="810" stroke="#dfceb5" stroke-width="1.5" opacity="0.6"/>
+  <line x1="0" y1="910" x2="1600" y2="910" stroke="#dfceb5" stroke-width="2" opacity="0.6"/>
+  <line x1="0" y1="1040" x2="1600" y2="1040" stroke="#dfceb5" stroke-width="2.5" opacity="0.6"/>
+
+  <line x1="280" y1="750" x2="150" y2="1100" stroke="#dfceb5" stroke-width="1.5" opacity="0.5"/>
+  <line x1="600" y1="750" x2="520" y2="1100" stroke="#dfceb5" stroke-width="1.5" opacity="0.5"/>
+  <line x1="980" y1="750" x2="1020" y2="1100" stroke="#dfceb5" stroke-width="1.5" opacity="0.5"/>
+  <line x1="1300" y1="750" x2="1420" y2="1100" stroke="#dfceb5" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Floor Reflections of Ceiling Lights -->
+  <ellipse cx="500" cy="900" rx="120" ry="25" fill="url(#floorSpotlight)"/>
+  <ellipse cx="800" cy="850" rx="180" ry="30" fill="url(#floorSpotlight)"/>
+  <ellipse cx="1150" cy="900" rx="120" ry="25" fill="url(#floorSpotlight)"/>
+
+  <!-- LEFT AIRPORT-STYLE CHROMED PERFORATED WAITING CHAIRS (In foreground perspective) -->
+  <g transform="translate(180, 750)">
+    <!-- Shadow -->
+    <ellipse cx="50" cy="180" rx="240" ry="35" fill="#000000" opacity="0.35" filter="url(#softGlow)"/>
+
+    <!-- Chair 3 (Back) -->
+    <path d="M 0,-40 L 70,-40 L 80,60 L 5,60 Z" fill="url(#chromeGrad)" stroke="#6b7280" stroke-width="2"/>
+    <!-- Chair 2 (Middle) -->
+    <path d="M 60,-10 L 140,-10 L 155,100 L 70,100 Z" fill="url(#chromeGrad)" stroke="#6b7280" stroke-width="2.5"/>
+    <!-- Chair 1 (Front) -->
+    <path d="M 130,30 L 230,30 L 250,160 L 145,160 Z" fill="url(#chromeGrad)" stroke="#4b5563" stroke-width="3"/>
+
+    <!-- Curved Chrome Armrests & Beam -->
+    <path d="M -15,10 Q -40,30 -20,80 L 12,90 Q 2,40 10,10" fill="none" stroke="url(#chromeGrad)" stroke-width="10"/>
+    <path d="M 125,75 Q 100,105 125,165 L 160,175 Q 145,115 155,75" fill="none" stroke="url(#chromeGrad)" stroke-width="12"/>
+    <path d="M 235,120 Q 210,155 240,225 L 280,235 Q 265,165 270,120" fill="none" stroke="url(#chromeGrad)" stroke-width="14"/>
+
+    <!-- Legs & Feet -->
+    <line x1="-5" y1="85" x2="-25" y2="195" stroke="#4b5563" stroke-width="12" stroke-linecap="round"/>
+    <ellipse cx="-28" cy="195" rx="14" ry="5" fill="#1f2937"/>
+
+    <line x1="260" y1="160" x2="260" y2="265" stroke="#4b5563" stroke-width="14" stroke-linecap="round"/>
+    <ellipse cx="260" cy="265" rx="18" ry="7" fill="#1f2937"/>
+  </g>
+
+  <!-- RIGHT SOFA / LOUNGE COUCH -->
+  <g transform="translate(1120, 680)">
+    <!-- Shadow -->
+    <ellipse cx="160" cy="170" rx="180" ry="25" fill="#000000" opacity="0.35" filter="url(#softGlow)"/>
+
+    <!-- Backrest -->
+    <path d="M 30,-80 L 250,-80 Q 275,-80 275,-50 L 275,60 L 30,60 Z" fill="url(#brownSofa)"/>
+    <line x1="30" y1="-80" x2="275" y2="-80" stroke="#785944" stroke-width="4"/>
+
+    <!-- Seat Cushion -->
+    <path d="M 10,60 L 290,60 Q 305,60 305,85 L 305,165 L 10,165 Z" fill="#433126" stroke="#2c2018" stroke-width="2"/>
+    <line x1="10" y1="60" x2="305" y2="60" stroke="#684c39" stroke-width="4"/>
+
+    <!-- Sofa Base / Plinth -->
+    <rect x="25" y="165" width="270" height="20" fill="#1a120c"/>
+
+    <!-- Plant behind sofa in corner -->
+    <g transform="translate(340, 20)">
+      <rect x="-20" y="80" width="40" height="50" rx="3" fill="#ffffff"/>
+      <path d="M 0,80 Q -25,20 -35,-20 Q -15,-5 0,80" fill="#15803d"/>
+      <path d="M 0,80 Q 0,0 0,-45 Q 15,-5 0,80" fill="#22c55e"/>
+      <path d="M 0,80 Q 25,20 35,-20 Q 15,-5 0,80" fill="#15803d"/>
+    </g>
+
+    <!-- Foreground Chrome Visitor Chair (Right Edge) -->
+    <g transform="translate(260, 110)">
+      <path d="M 0,0 L 120,0 L 150,150 L 20,150 Z" fill="url(#chromeGrad)" stroke="#4b5563" stroke-width="4"/>
+      <path d="M 0,0 Q -20,35 0,85 L 35,95 Q 20,40 25,0" fill="none" stroke="url(#chromeGrad)" stroke-width="12"/>
+      <line x1="20" y1="150" x2="10" y2="240" stroke="#4b5563" stroke-width="12" stroke-linecap="round"/>
+      <ellipse cx="10" cy="240" rx="16" ry="6" fill="#1f2937"/>
+    </g>
+  </g>
+</svg>

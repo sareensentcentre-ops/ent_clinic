@@ -1,0 +1,6 @@
+{
+  "name": "Sareen's ENT & Head Neck Centre",
+  "description": "Premier ENT & Head Neck Centre in Lanka, Varanasi led by Dr. Akhil Sareen MS (BHU). Advanced Zeiss microscopy, Karl Storz endoscopy, and Coblation surgery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
